@@ -3,7 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>BloominG BEAUTY SPA - Nail Art Studio</title>
+    <title>BloominG BEAUTY SPA - <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Nail Gallery & Poll – Paller Studio</title>
+    
+    <!-- Meta tags for Facebook / Meta sharing -->
+    <meta property="og:title" content="Nail Gallery & Poll – Paller Studio" />
+    <meta property="og:description" content="Browse beautiful nail designs, vote for your favorite, and get in touch with Paller Studio." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.com" />
+    <meta property="og:image" content="https://yourdomain.com/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ═══ HEADER ═══ -->
+    <div class="header">
+        <div class="brand">
+            💅 <span>Paller</span> Studio
+        </div>
+        <div class="contact">
+            <a href="tel:+256701234567">📞 +256 701 234 567</a>
+            <a href="https://wa.me/256701234567" target="_blank">💬 WhatsApp</a>
+            <a href="mailto:paller@example.com">✉️ paller@example.com</a>
+            <a href="https://instagram.com/pallerstudio" target="_blank">📸 Instagram</a>
+        </div>
+    </div>
+
+    <!-- ═══ SHARE ROW ═══ -->
+    <div class="container">
+        <div class="share-row">
+            <button class="share-btn fb" onclick="shareOnFacebook()">📘 Share on Facebook</button>
+            <button class="share-btn meta" onclick="shareOnMeta()">🧿 Share on Meta</button>
+            <button class="share-btn copy" onclick="copyLink()">🔗 Copy Link</button>
+        </div>
+    </div>
+
+    <!-- ═══ MAIN CONTENT ═══ -->
+    <div class="container">
+
+        <!-- Gallery Section -->
+        <h2 class="section-title">🖼️ Nail Gallery</h2>
+        <p class="section-sub">Browse our latest designs. Tap one to vote!</p>
+
+        <div id="galleryGrid" class="gallery-grid">
+            <!-- Gallery items will be rendered by JavaScript -->
+        </div>
+
+        <!-- Poll / Voting Section -->
+        <div class="poll-box">
+            <h3>🗳️ Vote for Your Favorite</h3>
+            <p class="poll-sub">Select a nail design above, then cast your vote!</p>
+            <div class="poll-actions">
+                <button class="btn btn-primary" id="voteBtn" disabled>🗳️ Vote Now</button>
+                <button class="btn btn-outline" id="resetBtn">🔄 Reset Selection</button>
+                <button class="btn btn-gold" id="showResultsBtn">📊 Show Results</button>
+            </div>
+            <div id="resultsContainer" class="results-box">
+                <!-- Results will be rendered here -->
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <h3>📞 Get in Touch</h3>
+            <p style="color:#7a5a4a; margin-bottom:8px;">Book an appointment or ask about our nail services.</p>
+            <div class="contact-grid">
+                <div class="contact-item">📞 <a href="tel:+256701234567">+256 701 234 567</a></div>
+                <div class="contact-item">💬 <a href="https://wa.me/256701234567" target="_blank">WhatsApp</a></div>
+                <div class="contact-item">✉️ <a href="mailto:paller@example.com">paller@example.com</a></div>
+                <div class="contact-item">📸 <a href="https://instagram.com/pallerstudio" target="_blank">@pallerstudio</a></div>
+                <div class="contact-item">📍 Kampala, Uganda</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ═══ FOOTER ═══ -->
+    <div class="footer">
+        © 2026 Paller Studio – Nail Art & Design. All rights reserved.
+    </div>
+
+    <!-- ═══ JAVASCRIPT ═══ -->
+    <script src="script.js"></script>
+
+</body>
+</html>Nail Art Studio</title>
     
     <!-- Meta tags -->
     <meta property="og:title" content="Blooming Beauty Spa - Nail Art Studio" />
