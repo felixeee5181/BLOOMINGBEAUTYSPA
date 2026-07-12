@@ -3,58 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLOOMING BEAUTY SPA</title>
+    <title>Blooming Beauty Spa Nails</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- ═══ HEADER ═══ -->
-    <header class="header">
-        <div class="brand">💅 <span>Paller</span> Studio</div>
-        <div class="contact">
-            <a href="tel:+254 793379201">📞+254 793379201 </a>
-            <a href="https://wa.me/254793379201" target="_blank">💬 WhatsApp</a>
-            <a href="mailto:bloomingbeautyspa@gmail.com">✉️ bloomingbeautyspa@gmail.com</a>
-            <a href="https://instagram.com/bloomingbeautyspa" target="_blank">📸 Instagram</a>
-        </div>
-    </header>
+    <!-- ═══ HERO BANNER SECTION (Background Image + Info Overlay) ═══ -->
+    <div class="hero-banner">
+        <div class="hero-overlay">
+            
+            <!-- Top Logo Area -->
+            <div class="brand-top">
+                <h1 class="logo-text">🌺 Blooming <span>Beauty Spa</span></h1>
+                <p class="tagline">Nails &amp; Beauty Salon</p>
+            </div>
 
-    <!-- ═══ FULL-WIDTH BANNER ═══ -->
-    <div class="banner-wrapper">
-        <img src="banner1.png" alt="Paller Studio Banner">
+            <!-- Middle: Services & Contact Grid -->
+            <div class="hero-grid">
+                
+                <!-- Left: Services -->
+                <div class="hero-card">
+                    <h3>💅 Our Services</h3>
+                    <ul>
+                        <li>Classic Manicure &amp; Pedicure</li>
+                        <li>Acrylic Nail Extensions</li>
+                        <li>Nail Refills &amp; Repairs</li>
+                        <li>Cuticle Care &amp; Nail Shaping</li>
+                    </ul>
+                </div>
+
+                <!-- Right: Contact Info -->
+                <div class="hero-card">
+                    <h3>📞 Get in Touch</h3>
+                    <div class="contact-item">📞 <a href="tel:+254793379201">+254 793 379 201</a></div>
+                    <div class="contact-item">✉️ <a href="mailto:bloomingbeautysppa@gmail.com">bloomingbeautysppa@gmail.com</a></div>
+                    <div class="contact-item">📸 <a href="https://instagram.com/bloomingbeautyspa" target="_blank">@bloomingbeautyspa</a></div>
+                    <div class="contact-item location">📍 Bomet, Opposite Imperial Driving School</div>
+                </div>
+
+            </div>
+
+            <!-- Bottom: "Book Now" Button -->
+            <div class="hero-action">
+                <a href="tel:+254793379201" class="btn-book">📅 Book an Appointment</a>
+            </div>
+
+        </div>
     </div>
 
     <!-- ═══ SHARE BUTTONS ═══ -->
-    <div class="share-row">
-        <button class="share-btn fb" onclick="shareOnFacebook()">📘 Share on Facebook</button>
-        <button class="share-btn copy" onclick="copyLink()">🔗 Copy Link</button>
+    <div class="container">
+        <div class="share-row">
+            <button class="share-btn fb" onclick="shareOnFacebook()">📘 Share on Facebook</button>
+            <button class="share-btn copy" onclick="copyLink()">🔗 Copy Link</button>
+        </div>
     </div>
 
-    <!-- ═══ GALLERY ═══ -->
+    <!-- ═══ GALLERY (Uses images from your original design) ═══ -->
     <div class="container">
-        <h2 class="section-title">🖼️ Nail Gallery</h2>
+        <h2 class="section-title">🖼️ Our Nail Gallery</h2>
         <p class="section-sub">Browse our latest nail art designs.</p>
 
         <div id="galleryGrid" class="gallery-grid">
-            <!-- Rendered by JavaScript -->
-        </div>
-
-        <!-- ═══ CONTACT (TRANSPARENT) ═══ -->
-        <div class="contact-section">
-            <h3>📞 Get in Touch</h3>
-            <p style="color:#7a5a4a; margin-bottom:10px;">Book an appointmen or ask about our services.</p>
-            <div class="contact-grid">
-                <div class="contact-item">📞 <a href="tel:+254 793379201">+254 793379201</a></div>
-                <div class="contact-item">💬 <a href="https://wa.me/254793379201" target="_blank">WhatsApp</a></div>
-                <div class="contact-item">✉️ <a href="mailto:bloomingbeautyspa@gmail.com">bloomingbeautyspa@gmail.com</a></div>
-                <div class="contact-item">📸 <a href="https://instagram.com/bloomingbeautyspa" target="_blank">@bloomingbeautyspa</a></div>
-            </div>
+            <!-- Gallery items loaded by JavaScript -->
         </div>
     </div>
 
     <!-- ═══ FOOTER ═══ -->
     <footer class="footer">
-        © 2026 blooming beauty spa – Nail Art & Design. All rights reserved.
+        © 2026 Blooming Beauty Spa Nails. All rights reserved. <br> Bomet, Opposite Imperial Driving School.
     </footer>
 
     <script src="script.js"></script>
