@@ -1,9 +1,8 @@
 // ============================================================
-// script.js – Nail Gallery & Poll Logic
+// script.js – Nail Poll Gallery
 // ============================================================
 
-// ─── Sample Nail Gallery Data ───
-// In a real app, you would load this from a JSON file or API.
+// ─── Sample Nail Designs ───
 const nailDesigns = [
     {
         id: 1,
@@ -53,12 +52,11 @@ const nailDesigns = [
 let selectedId = null;
 let galleryData = [];
 
-// ─── Load from localStorage (persistent votes) ───
+// ─── Load from localStorage ───
 function loadGallery() {
-    const saved = localStorage.getItem('pallerGalleryData');
+    const saved = localStorage.getItem('nailPollData');
     if (saved) {
         const parsed = JSON.parse(saved);
-        // Merge saved votes with our base designs
         galleryData = nailDesigns.map(design => {
             const found = parsed.find(p => p.id === design.id);
             return found ? { ...design, votes: found.votes } : design;
@@ -70,7 +68,7 @@ function loadGallery() {
 
 // ─── Save to localStorage ───
 function saveGallery() {
-    localStorage.setItem('pallerGalleryData', JSON.stringify(galleryData));
+    localStorage.setItem('nailPollData', JSON.stringify(galleryData));
 }
 
 // ─── Render Gallery ───
@@ -90,7 +88,6 @@ function renderGallery() {
                 <div class="desc">${item.description}</div>
                 <div class="vote-count">❤️ ${item.votes} vote${item.votes !== 1 ? 's' : ''}</div>
             </div>
-            <div class="vote-badge">${selectedId === item.id ? '✓ Selected' : 'Tap to vote'}</div>
         `;
 
         div.addEventListener('click', () => selectDesign(item.id));
@@ -106,19 +103,20 @@ function selectDesign(id) {
     renderGallery();
 }
 
-// ─── Update Vote Button ───
+// ─── Update vote button ───
 function updateVoteButton() {
     const btn = document.getElementById('voteBtn');
     if (selectedId !== null) {
+        const name = galleryData.find(d => d.id === selectedId)?.name || '';
         btn.disabled = false;
-        btn.textContent = `🗳️ Vote for "${galleryData.find(d => d.id === selectedId).name}"`;
+        btn.textContent = `🗳️ Vote for "${name}"`;
     } else {
         btn.disabled = true;
         btn.textContent = '🗳️ Vote Now (select a design)';
     }
 }
 
-// ─── Cast a Vote ───
+// ─── Cast a vote ───
 document.getElementById('voteBtn').addEventListener('click', () => {
     if (selectedId === null) return;
     const design = galleryData.find(d => d.id === selectedId);
@@ -126,29 +124,28 @@ document.getElementById('voteBtn').addEventListener('click', () => {
         design.votes += 1;
         saveGallery();
         renderGallery();
-        // Show a quick feedback
         const btn = document.getElementById('voteBtn');
         btn.textContent = '✅ Vote Cast!';
         setTimeout(() => updateVoteButton(), 1200);
     }
 });
 
-// ─── Reset Selection ───
+// ─── Reset selection ───
 document.getElementById('resetBtn').addEventListener('click', () => {
     selectedId = null;
     renderGallery();
 });
 
-// ─── Show / Hide Results ───
+// ─── Show results ───
 document.getElementById('showResultsBtn').addEventListener('click', () => {
     const container = document.getElementById('resultsContainer');
+
     if (container.classList.contains('show')) {
         container.classList.remove('show');
         document.getElementById('showResultsBtn').textContent = '📊 Show Results';
         return;
     }
 
-    // Sort by votes (descending)
     const sorted = [...galleryData].sort((a, b) => b.votes - a.votes);
     const totalVotes = galleryData.reduce((sum, d) => sum + d.votes, 0);
 
@@ -172,21 +169,16 @@ document.getElementById('showResultsBtn').addEventListener('click', () => {
     document.getElementById('showResultsBtn').textContent = '📊 Hide Results';
 });
 
-// ─── Share Functions ───
+// ─── Share ───
 function shareOnFacebook() {
     const url = encodeURIComponent(window.location.href);
     window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank', 'width=600,height=400');
 }
 
-function shareOnMeta() {
-    // Meta shares via the same Facebook dialog
-    shareOnFacebook();
-}
-
 function copyLink() {
     const url = window.location.href;
     navigator.clipboard.writeText(url).then(() => {
-        alert('✅ Link copied to clipboard! Share it with your friends.');
+        alert('✅ Link copied to clipboard!');
     }).catch(() => {
         prompt('📋 Copy this link manually:', url);
     });
@@ -196,7 +188,7 @@ function copyLink() {
 loadGallery();
 renderGallery();
 
-// ─── Re-render when page becomes visible (e.g., back from share) ───
+// ─── Re-render when page becomes visible ───
 document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'visible') {
         loadGallery();
