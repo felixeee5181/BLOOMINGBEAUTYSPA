@@ -1,5 +1,5 @@
 /* ============================================================
-   style.css – Nail Studio Gallery (Professional)
+   style.css – Full-Width Banner Nail Studio
    ============================================================ */
 
 * {
@@ -17,14 +17,6 @@ body {
     flex-direction: column;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px 40px;
-    flex: 1;
-    width: 100%;
-}
-
 /* ─── HEADER ─── */
 .header {
     background: #3b1f14;
@@ -35,6 +27,8 @@ body {
     justify-content: space-between;
     align-items: center;
     border-bottom: 4px solid #d9a07a;
+    position: relative;
+    z-index: 10;
 }
 
 .header .brand {
@@ -69,19 +63,22 @@ body {
     color: #d9a07a;
 }
 
-/* ─── BANNER ─── */
-.banner {
+/* ─── FULL-WIDTH BANNER ─── */
+.banner-wrapper {
     width: 100%;
     overflow: hidden;
-    background: #fff;
+    background: #faf7f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.banner img {
+.banner-wrapper img {
     width: 100%;
     height: auto;
+    max-height: 80vh;        /* never taller than 80% of the viewport */
+    object-fit: contain;     /* ✅ shows the whole image, no cropping */
     display: block;
-    max-height: 600px;
-    object-fit: contain;   /* ✅ Ensures full image is shown, no cropping */
     background: #faf7f5;
 }
 
@@ -90,7 +87,7 @@ body {
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
-    margin: 24px 0 16px;
+    margin: 28px 0 16px;
     justify-content: center;
 }
 
@@ -126,6 +123,15 @@ body {
 .share-btn.copy:hover {
     background: #1f110a;
     transform: translateY(-2px);
+}
+
+/* ─── CONTAINER ─── */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+    flex: 1;
+    width: 100%;
 }
 
 /* ─── GALLERY ─── */
@@ -269,7 +275,7 @@ body {
     .section-title {
         font-size: 1.4rem;
     }
-    .banner img {
-        max-height: 300px;
+    .banner-wrapper img {
+        max-height: 40vh;
     }
 }
