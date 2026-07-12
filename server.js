@@ -1,5 +1,5 @@
 // ============================================================
-// script.js – Nail Studio Gallery (No Polls)
+// script.js – Nail Studio Gallery (Professional)
 // ============================================================
 
 // ─── Sample Nail Designs ───
