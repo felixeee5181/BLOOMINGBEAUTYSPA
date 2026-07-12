@@ -2,60 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>BloominG BEAUTY SPA - <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>Nail Gallery & Poll – Paller Studio</title>
-    
-    <!-- Meta tags for Facebook / Meta sharing -->
-    <meta property="og:title" content="Nail Gallery & Poll – Paller Studio" />
-    <meta property="og:description" content="Browse beautiful nail designs, vote for your favorite, and get in touch with Paller Studio." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://yourdomain.com" />
-    <meta property="og:image" content="https://yourdomain.com/og-image.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nail Poll Gallery – Paller Studio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- ═══ HEADER ═══ -->
+    <!-- Header -->
     <div class="header">
-        <div class="brand">
-            💅 <span>Paller</span> Studio
-        </div>
+        <div class="brand">💅 <span>Paller</span> Studio</div>
         <div class="contact">
             <a href="tel:+254 793379201">📞 +254 793379201</a>
-            <a href="https://wa.me/793379201" target="_blank">💬 WhatsApp</a>
+            <a href="https://wa.me/+254 793379201" target="_blank">💬 WhatsApp</a>
             <a href="mailto:paller@example.com">✉️ paller@example.com</a>
             <a href="https://instagram.com/pallerstudio" target="_blank">📸 Instagram</a>
         </div>
     </div>
 
-    <!-- ═══ SHARE ROW ═══ -->
     <div class="container">
+
+        <!-- Share -->
         <div class="share-row">
             <button class="share-btn fb" onclick="shareOnFacebook()">📘 Share on Facebook</button>
-            <button class="share-btn meta" onclick="shareOnMeta()">🧿 Share on Meta</button>
             <button class="share-btn copy" onclick="copyLink()">🔗 Copy Link</button>
         </div>
-    </div>
 
-    <!-- ═══ MAIN CONTENT ═══ -->
-    <div class="container">
-
-        <!-- Gallery Section -->
+        <!-- Gallery -->
         <h2 class="section-title">🖼️ Nail Gallery</h2>
         <p class="section-sub">Browse our latest designs. Tap one to vote!</p>
 
-        <div id="galleryGrid" class="gallery-grid">
-            <!-- Gallery items will be rendered by JavaScript -->
-        </div>
+        <div id="galleryGrid" class="gallery-grid"></div>
 
-        <!-- Poll / Voting Section -->
+        <!-- Poll -->
         <div class="poll-box">
             <h3>🗳️ Vote for Your Favorite</h3>
             <p class="poll-sub">Select a nail design above, then cast your vote!</p>
@@ -64,173 +42,25 @@
                 <button class="btn btn-outline" id="resetBtn">🔄 Reset Selection</button>
                 <button class="btn btn-gold" id="showResultsBtn">📊 Show Results</button>
             </div>
-            <div id="resultsContainer" class="results-box">
-                <!-- Results will be rendered here -->
-            </div>
+            <div id="resultsContainer" class="results-box"></div>
         </div>
 
-        <!-- Contact Section -->
+        <!-- Contact -->
         <div class="contact-section">
             <h3>📞 Get in Touch</h3>
             <p style="color:#7a5a4a; margin-bottom:8px;">Book an appointment or ask about our nail services.</p>
             <div class="contact-grid">
-                <div class="contact-item">📞 <a href="tel:+254 +254 793379201">+254 793379201</a></div>         
+                <div class="contact-item">📞 <a href="tel:+254 793379201">+254 793379201</a></div>
                 <div class="contact-item">💬 <a href="https://wa.me/+254 793379201" target="_blank">WhatsApp</a></div>
-                <div class="contact-item">✉️ <a href="mailto:bloomingbeautyspa@gmail.com">bloominngbeautyspa@gmail.com</a></div>
+                <div class="contact-item">✉️ <a href="mailto:paller@example.com">paller@example.com</a></div>
                 <div class="contact-item">📸 <a href="https://instagram.com/pallerstudio" target="_blank">@pallerstudio</a></div>
-                <div class="contact-item">📍 </div>BOMET, OPPOSITE IMPERIAL DRIVING SCHOOL
             </div>
         </div>
 
     </div>
 
-    <!-- ═══ FOOTER ═══ -->
-    <div class="footer">
-        © 2026 Paller Studio – Nail Art & Design. All rights reserved.
-    </div>
+    <div class="footer">© 2026 Paller Studio – Nail Art & Design.</div>
 
-    <!-- ═══ JAVASCRIPT ═══ -->
     <script src="script.js"></script>
-
-</body>
-</html>Nail Art Studio</title>
-    
-    <!-- Meta tags -->
-    <meta property="og:title" content="Blooming Beauty Spa - Nail Art Studio" />
-    <meta property="og:description" content="Browse beautiful nail designs, vote for your favorite, and book your appointment." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://bloomingbeautyspa.com" />
-    <meta name="twitter:card" content="summary_large_image" />
-
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <!-- ═══ LANDING PAGE - BANNER 1 ═══ -->
-    <div id="landingPage" class="landing-container">
-        <div class="landing-banner" style="background-image: url('banner1.png');">
-            <div class="banner-overlay"></div>
-            <div class="banner-content">
-                <div class="banner-logo">💅</div>
-                <h1 class="banner-title">Blooming Beauty Spa</h1>
-                <p class="banner-subtitle">Where Your Nails Become Art ✨</p>
-                <p class="banner-description">Experience luxury nail care in a serene, feminine atmosphere. 
-                We merge beauty with artistry to create stunning nail designs that reflect your unique style.</p>
-                <div class="banner-buttons">
-                    <button onclick="enterGallery()" class="banner-btn primary">
-                        ✨ Enter Gallery
-                    </button>
-                    <button onclick="scrollToContact()" class="banner-btn secondary">
-                        📞 Contact Us
-                    </button>
-                </div>
-                <div class="banner-features">
-                    <span>💅 Premium Nail Art</span>
-                    <span>🌸 Relaxing Atmosphere</span>
-                    <span>✨ Expert Stylists</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ═══ GALLERY PAGE - BANNER 2 ═══ -->
-    <div id="galleryPage" class="gallery-container" style="display: none;">
-        
-        <!-- Gallery Banner with banner2.png -->
-        <div class="gallery-banner" style="background-image: url('banner2.png');">
-            <div class="banner-overlay"></div>
-            <div class="banner-content">
-                <h2 class="gallery-banner-title">✨ Nail Art Gallery</h2>
-                <p class="gallery-banner-sub">Browse, Vote & Inspire Your Next Look</p>
-                <button onclick="goBackToLanding()" class="back-btn">← Back to Home</button>
-            </div>
-        </div>
-
-        <!-- ═══ HEADER ═══ -->
-        <div class="header">
-            <div class="brand">
-                💅 <span>Blooming Paller</span> Studio
-            </div>
-            <div class="contact">
-                <a href="tel:+254 793379201">📞 +254 793379201</a>
-                <a href="https://wa.me/+254793379201" target="_blank">💬 WhatsApp</a>
-                <a href="mailto:bloomingbeautyspa@gmail.com">✉️ Email</a>
-                <a href="https://instagram.com/bloomingbeautyspastudio" target="_blank">📸 Instagram</a>
-            </div>
-        </div>
-
-        <!-- ═══ SHARE ROW ═══ -->
-        <div class="container">
-            <div class="share-row">
-                <button class="share-btn fb" onclick="shareOnFacebook()">📘 Share</button>
-                <button class="share-btn meta" onclick="shareOnMeta()">🧿 Meta</button>
-                <button class="share-btn copy" onclick="shareOnTiktok()">🔗 TikTok</button>
-            </div>
-        </div>
-
-        <!-- ═══ ADMIN PANEL ═══ -->
-        <div class="container">
-            <div class="admin-panel">
-                <h3>👑 Admin Panel - Upload Nail Designs</h3>
-                <p class="admin-sub">Upload new nail art images to display in the gallery</p>
-                <div class="admin-form">
-                    <input type="text" id="designName" placeholder="Design Name (e.g., Rose Gold)" class="admin-input">
-                    <input type="file" id="designImage" accept="image/*" class="admin-file">
-                    <button onclick="uploadDesign()" class="admin-btn">📤 Upload Design</button>
-                </div>
-                <div id="uploadStatus" class="upload-status"></div>
-            </div>
-        </div>
-
-        <!-- ═══ MAIN CONTENT ═══ -->
-        <div class="container">
-
-            <!-- Gallery Section -->
-            <h2 id="gallery" class="section-title">🖼️ Nail Gallery</h2>
-            <p class="section-sub">Browse our latest designs. Tap one to vote!</p>
-
-            <div id="galleryGrid" class="gallery-grid">
-                <!-- Gallery items will be rendered by JavaScript -->
-            </div>
-
-            <!-- Poll / Voting Section -->
-            <div class="poll-box">
-                <h3>🗳️ Vote for Your Favorite</h3>
-                <h4>We design to merge your taste</h4>
-                <p class="poll-sub">Select a nail design above, then cast your vote!</p>
-                <div class="poll-actions">
-                    <button class="btn btn-primary" id="voteBtn" disabled>🗳️ Vote Now</button>
-                    <button class="btn btn-outline" id="resetBtn">🔄 Reset Selection</button>
-                    <button class="btn btn-gold" id="showResultsBtn">📊 Show Results</button>
-                </div>
-                <div id="resultsContainer" class="results-box">
-                    <!-- Results will be rendered here -->
-                </div>
-            </div>
-
-            <!-- Contact Section -->
-            <div id="contact" class="contact-section">
-                <h3>📞 Get in Touch</h3>
-                <p style="color:#7a5a4a; margin-bottom:8px;">Book an appointment or ask about our nail services.</p>
-                <div class="contact-grid">
-                    <div class="contact-item">📞 <a href="tel:+254793379201">+254 793379201</a></div>
-                    <div class="contact-item">💬 <a href="https://wa.me/+254793379201" target="_blank">WhatsApp</a></div>
-                    <div class="contact-item">✉️ <a href="mailto:bloomingbeautyspa@gmail.com">bloomingbeauty@gmail.com</a></div>
-                    <div class="contact-item">📸 <a href="https://instagram.com/bloomingbeautyspa" target="_blank">@bloomingpallerstudio</a></div>
-                    <div class="contact-item">📍 Bomet, opposite the imperial driving school</div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- ═══ FOOTER ═══ -->
-        <div class="footer">
-            © 2026 Blooming Beauty Spa – Nail Art & Design. All rights reserved.
-        </div>
-    </div>
-
-    <!-- ═══ JAVASCRIPT ═══ -->
-    <script src="script.js"></script>
-
 </body>
 </html>
